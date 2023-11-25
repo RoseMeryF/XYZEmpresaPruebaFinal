@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bgmantenedor"
+    android:gravity="center"
+    android:longClickable="false"
+    android:textAlignment="center"
+    tools:context=".Producto">
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search"
+        android:layout_width="369dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/bordelavanda"
+        android:focusable="false"
+        app:closeIcon="@drawable/baseline_delete_24"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search..."
+        app:searchHintIcon="@null" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="367dp"
+        android:layout_height="115dp"
+        android:layout_alignStart="@+id/search"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="242dp"
+        android:fontFamily="@font/architects_daughter"
+        android:gravity="center"
+        android:hint="@string/etidproducto"
+        android:text="Moda Juvenil 2023"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnedit"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bordelavanda"
+        android:backgroundTint="#31B2B7"
+        android:importantForAccessibility="no"
+        android:src="@drawable/baseline_add_24"
+        android:textColor="#EAE2E2"
+        android:textColorHint="#658217C5"
+        android:tint="@color/white"
+        app:fabSize="normal" />
+
+    <EditText
+        android:id="@+id/etpproducto"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/bordelavanda"
+        android:ems="10"
+        android:fontFamily="@font/architects_daughter"
+        android:hapticFeedbackEnabled="false"
+        android:hint="@string/etidproducto"
+        android:inputType="text"
+        android:textAlignment="inherit"
+        android:textColor="#F1ECEC"
+        android:textColorHint="#8591F6"
+        android:textColorLink="#F1ECEC"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnedit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etnameprod"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:layout_toStartOf="@+id/btnsend"
+        android:backgroundTint="#A7C3BB"
+        android:fontFamily="@font/architects_daughter"
+        android:gravity="center"
+        android:onClick="verProducto"
+        android:text="Ver"
+        android:textColorHighlight="#651717"
+        android:textSize="18sp"
+        app:backgroundTint="#A6C2BA"
+        app:icon="@drawable/baseline_create_24" />
+
+    <Button
+        android:id="@+id/btnsend"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etnameprod"
+        android:layout_alignEnd="@+id/floatingActionButton"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="-20dp"
+        android:layout_marginBottom="185dp"
+        android:backgroundTint="#A7C3BB"
+        android:fontFamily="@font/architects_daughter"
+        android:gravity="center"
+        android:text="Notificar"
+        android:textColorHighlight="#A6C2BA"
+        android:textSize="18sp"
+        app:icon="@drawable/baseline_email_24" />
+
+    <EditText
+        android:id="@+id/etnameprod"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_below="@+id/etpproducto"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bordelavanda"
+        android:ems="10"
+        android:fontFamily="@font/architects_daughter"
+        android:hint="@string/etnameprod"
+        android:inputType="text"
+        android:textAlignment="inherit"
+        android:textColor="#F1ECEC"
+        android:textColorHint="#8591F6"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnañadir"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="18dp"
+        android:layout_toEndOf="@+id/etpproducto"
+        android:backgroundTint="#A7C3BB"
+        android:fontFamily="@font/architects_daughter"
+        android:text="Añadir"
+        android:textColorHighlight="#651717"
+        android:textSize="18sp"
+        android:onClick="addProducto"/>
+
+    <Button
+        android:id="@+id/btneliminar"
+        android:layout_width="147dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnedit"
+        android:layout_alignStart="@+id/etnameprod"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="109dp"
+        android:backgroundTint="#A7C3BB"
+        android:fontFamily="@font/architects_daughter"
+        android:gravity="center"
+        android:text="Eliminar"
+        android:textColorHighlight="#651717"
+        android:textSize="18sp"
+        app:icon="@drawable/baseline_delete_24" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="411dp"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="363dp"
+        android:layout_height="173dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="73dp" />
+
+</RelativeLayout>

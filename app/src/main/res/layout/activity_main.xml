@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bglogin"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+            app:srcCompat="@mipmap/ic_launcher_foreground" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:shadowColor="#15EDC2"
+            android:text="Bienvenido/a, inicia sesión"
+            android:textAlignment="center"
+            android:textColor="#F1F3F4"
+            android:textColorHighlight="#16508E"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etuserreg"
+            android:layout_width="336dp"
+            android:layout_height="58dp"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:hint="@string/etuser"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            android:textColor="#DEEDFF"
+            android:textColorHint="#90DEEDFF" />
+
+        <EditText
+            android:id="@+id/etpassreg"
+            android:layout_width="336dp"
+            android:layout_height="62dp"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:hint="@string/etpass"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="#DEEDFF"
+            android:textColorHint="#90DEEDFF" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnregistrarse"
+        android:layout_width="174dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="148dp"
+        android:hint="@string/btnregistrarse"
+        android:onClick="registrarse"
+        android:textColorHint="#DEEDFF"
+        app:backgroundTint="#8BAC8C16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnlogin"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="177dp"
+        android:layout_height="47dp"
+        android:layout_gravity="center"
+        android:hint="@string/btnlogin"
+        android:onClick="EntrarLogin"
+        android:textColorHint="#DEEDFF"
+        app:backgroundTint="#8BAC8C16"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnregistrarse"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="193dp"
+        android:layout_height="86dp"
+        android:baselineAligned="false"
+        android:focusableInTouchMode="false"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:onClick="EntrarLogin"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:textAlignment="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnlogin"
+        tools:ignore="MissingConstraints">
+
+        <ProgressBar
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:indeterminateTint="@color/lavanda" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="start|center_vertical"
+            android:text="Loading..."
+            android:textColor="@color/lavanda"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

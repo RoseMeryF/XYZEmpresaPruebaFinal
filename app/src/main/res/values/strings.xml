@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">XYZEmpresa</string>
+    <!-- Menú inicio sesión -->
+    <string name="etuser">Ingresa tu correo o usuario</string>
+    <string name="etpass">Ingresa tu contraseña</string>
+    <string name="btnlogin">Ingresar</string>
+
+    <!-- Menú de registro -->
+    <string name="btnregistrarse">Registrarse</string>
+    <string name="etuserreg">Escriba su nombre de usuario</string>
+    <string name="etpassreg">Escriba una contraseña</string>
+    <string name="etpassv">Reingrese su contraseña</string>
+
+    <!-- Mantenedor de Producto -->
+    <string name="etidproducto">  Ingresa el precio</string>
+    <string name="etnameprod">Ingresa nombre del producto</string>
+
+    <!-- Mantenedor de Productos -->
+    <string name="etpproduct">  Ingresa el precio</string>
+    <string name="etnombreprod">Ingresa nombre del producto</string>
+    <string name="etdetalleprod">Ingresa detalle del producto</string>
+    <string name="etimgprod">Inserta URL imagen producto</string>
+
+
+
+</resources>
